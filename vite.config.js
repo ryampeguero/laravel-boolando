@@ -8,7 +8,9 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    alias: {
-        "~resources": "/resources/",
+    resolve: {
+        alias: {
+            "~resources": "/resources/",
+        }
     }
 });
