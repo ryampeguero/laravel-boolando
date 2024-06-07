@@ -10,6 +10,10 @@
     
 </head>
 <body>
-    ciao
+    <div class="container">
+        <div class="card">
+            <h1>ciao</h1>
+        </div>
+    </div>
 </body>
 </html>
