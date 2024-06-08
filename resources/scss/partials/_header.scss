@@ -1,0 +1,41 @@
+@use "./variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 80px;
+    max-height: 80px;
+    
+    min-width: 100vw;
+
+    background-color: #FF6900;
+
+}
+
+.menu {
+    
+    ul {
+        margin-top: 20px ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        border: 3px solid red;
+        
+        li {
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+
+}
