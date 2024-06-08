@@ -49,7 +49,7 @@ class Product {
        */ 
       public function setFrontImage($frontImg)
       {
-            $this->frontImg = $frontImg;
+            $this->frontImg = 'resources/img/'.$frontImg;
 
             return $this;
       }
