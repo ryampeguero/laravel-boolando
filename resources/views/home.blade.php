@@ -24,16 +24,29 @@
     }
 
     // dd($productsClass);
+
 @endphp
 
 @section('content')
-    <div class="container">
+    <div class="container mt-3">
         <div class="row">
             @foreach ($productsClass as $product)
                 <div class="col-4">
-                    {{-- @dd($product) --}}
                     <div class="ms_card">
-                        <img src="{{ Vite::asset($product->getFrontImage()) }}" alt="">
+                        {{-- Card Image and Tags --}}
+                        <div class="thumb">
+                            <div class="heart">
+                                <span>&hearts;</span>
+                            </div>
+                            <img class="show" src="{{ Vite::asset($product->getFrontImage()) }}" alt="">
+                            <img class="hidden" src="{{ Vite::asset($product->getBackImage()) }}" alt="">
+
+                            <div class="container-tag">
+                                <div class="tag"></div>
+                            </div>
+                        </div>
+
+                        {{-- Card Text --}}
                     </div>
                 </div>
             @endforeach
