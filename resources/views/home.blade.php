@@ -22,9 +22,7 @@
             $productsClass[] = $newProduct;
         }
     }
-
     // dd($productsClass);
-
 @endphp
 
 @section('content')
@@ -36,7 +34,7 @@
                         {{-- Card Image and Tags --}}
                         <div class="thumb">
                             <div class="heart">
-                                <span>&hearts;</span>
+                                <span class="{{ $product->getIsInFavorites() ? 'active' : '' }}">&hearts;</span>
                             </div>
                             <img class="show" src="{{ Vite::asset($product->getFrontImage()) }}" alt="">
                             <img class="hidden" src="{{ Vite::asset($product->getBackImage()) }}" alt="">
