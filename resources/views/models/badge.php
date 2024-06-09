@@ -15,6 +15,10 @@ class Badge
         return $this->discount;
     }
 
+    public function getRealDiscount(){
+        $discountInt = substr($this->discount, 1,2);
+        return $discountInt;
+    }
     /**
      * Get the value of tag
      */

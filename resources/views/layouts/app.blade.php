@@ -17,6 +17,10 @@
     {{-- MAIN --}}
     @yield('content')
     {{-- MAIN --}}
+
+    {{-- FOOTER --}}
+    @include('partials.footer')
+    {{-- FOOTER --}}
 </body>
 
 </html>

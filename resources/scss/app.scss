@@ -1,5 +1,6 @@
 @use "./partials/variables" as *;
 @use "./partials/header";
+@use "./partials/footer";
 @import "~bootstrap/scss/bootstrap.scss";
 
 * {
@@ -15,10 +16,11 @@ img {
 .ms_card {
     // padding: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-
+    // border: 2px solid green;
     // border: 3px solid red;
 
     .thumb {
@@ -95,5 +97,29 @@ img {
 
         }
 
+    }
+
+    .card-text {
+        margin: 0 30px;
+        align-self: start;
+        // border: 2px solid black;
+
+        .brand {
+            font-size: 0.7rem;
+        }
+        .name {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+        .price {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: red;
+
+            .old-price {
+                text-decoration: line-through;
+                color: rgb(69, 68, 68);
+            }
+        }
     }
 }

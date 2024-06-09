@@ -56,29 +56,32 @@
 
                                 @foreach ($badge as $key => $item)
                                     @if (empty($item->getDiscount()))
-                                    <div class="tag green">
-                                        {{ $item->getTag() }}
-                                    </div>
+                                        <div class="tag green">
+                                            {{ $item->getTag() }}
+                                        </div>
                                     @endif
                                 @endforeach
-
-
-
-                                {{-- @isset($badge[1])
-                                    @forelse ($badge[1] as $tag)
-                                        <div class="tag red">
-                                            @php
-                                            @endphp
-                                        </div>
-                                    @empty
-                                    @endforelse
-                                @endisset --}}
-
-
                             </div>
                         </div>
 
                         {{-- Card Text --}}
+                        <div class="card-text">
+                            <div class="brand">
+                                {{ $product->getBrand() }}
+                            </div>
+                            <div class="name">
+                                {{ $product->getName() }}
+                            </div>
+                            <div class="price">
+                                {{ $product->getPrice() }}&euro;
+
+                                @if ($product->getOldPrice() != 0)
+                                    <span class="old-price">
+                                        {{ strval($product->getOldPrice()) }}&euro;
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
                     </div>
                 </div>
             @endforeach

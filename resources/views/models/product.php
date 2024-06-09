@@ -11,7 +11,7 @@ class Product
     private int $price;
     private bool $isInFavorites;
     private array $badges = [];
-
+    private int $oldPrice = 0;
 
 
 
@@ -123,6 +123,15 @@ class Product
         return $this->price;
     }
 
+    public function getOldPrice()
+    {
+        foreach ($this->badges as $badge) {
+            if (empty($badge->getTag())) {
+                $this->oldPrice = floor($this->getPrice() / ($badge->getRealDiscount() / 100));
+            }
+        }
+        return $this->oldPrice;
+    }
     /**
      * Set the value of price
      *

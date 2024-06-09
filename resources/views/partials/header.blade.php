@@ -1,6 +1,4 @@
-@php
-$path = resource_path()
-@endphp
+
 <header>
     <div class="container">
         <div class="row navbar d-flex justify-content-between">
