@@ -18,4 +18,8 @@ Route::get('/', function () {
     $products = config("products");
     $data = compact("products", "path");
     return view('home', $data);
-});
+})->name('home');
+
+Route::get('/about', function (){
+    return view('about');
+})->name('about');

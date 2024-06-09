@@ -17,7 +17,9 @@
                 </ul>
             </div>
             <div class="col-3 border ms_cell">
-                <img src={{ Vite::asset('resources/img/boolean-logo.png') }} alt="">
+                <div class="logo">
+                    <img src={{ Vite::asset('resources/img/boolean-logo.png') }} alt="">
+                </div>
             </div>
             <div class="col-3 border ms_cell">
                 <div class="menu">
