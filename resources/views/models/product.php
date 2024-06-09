@@ -163,8 +163,11 @@ class Product
     public function setBadges($type, $value)
     {
         $badge = new Badge();
-        $badge->setType($type);
-        $badge->setValue($value);
+        if ($type === "discount") {
+            $badge->setDiscount($value);
+        } else if ($type === "tag") {
+            $badge->setTag($value);
+        }
 
         $this->badges[] = $badge;
 

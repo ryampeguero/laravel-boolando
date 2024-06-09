@@ -29,6 +29,3 @@ $path = resource_path()
     </div>
 </header>
 
-{{-- STYLE --}}
-
-{{-- /STYLE --}}

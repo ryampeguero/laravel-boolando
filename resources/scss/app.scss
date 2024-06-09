@@ -25,7 +25,31 @@ img {
         position: relative;
         top: 0;
         left: 0;
-    
+
+        .container-tag {
+            display: flex;
+            font-size: 0.7rem;
+            font-weight: 700;
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            
+
+            .tag {
+                padding: 5px;
+                color: white;
+                margin: 0 3px;
+            }
+
+            .green {
+                background-color: green;
+            }
+
+            .red {
+                background-color: red;
+            }
+        }
+
         .heart {
             display: flex;
             justify-content: center;

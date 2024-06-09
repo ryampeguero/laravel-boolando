@@ -1,45 +1,49 @@
 <?php
-class Badge{
-        private string $type;
-        private string $value;
+class Badge
+{
 
-        /**
-         * Get the value of type
-         */ 
-        public function getType()
-        {
-                return $this->type;
-        }
+    private string $discount = "";
+    private string $tag = "";
 
-        /**
-         * Set the value of type
-         *
-         * @return  self
-         */ 
-        public function setType($type)
-        {
-                $this->type = $type;
 
-                return $this;
-        }
 
-        /**
-         * Get the value of value
-         */ 
-        public function getValue()
-        {
-                return $this->value;
-        }
+    /**
+     * Get the value of discount
+     */
+    public function getDiscount()
+    {
+        return $this->discount;
+    }
 
-        /**
-         * Set the value of value
-         *
-         * @return  self
-         */ 
-        public function setValue($value)
-        {
-                $this->value = $value;
+    /**
+     * Get the value of tag
+     */
+    public function getTag()
+    {
+        return $this->tag;
+    }
 
-                return $this;
-        }
+    /**
+     * Set the value of discount
+     *
+     * @return  self
+     */ 
+    public function setDiscount($discount)
+    {
+        $this->discount = $discount;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of tag
+     *
+     * @return  self
+     */ 
+    public function setTag($tag)
+    {
+        $this->tag = $tag;
+
+        return $this;
+    }
 }

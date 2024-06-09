@@ -15,7 +15,7 @@
             $newProduct->setName($item['name']);
             $newProduct->setPrice($item['price']);
             $newProduct->setIsInFavorites($item['isInFavorites']);
-
+            // dd($item['badges']);
             foreach ($item['badges'] as $badge) {
                 $newProduct->setBadges($badge['type'], $badge['value']);
             }
@@ -42,7 +42,39 @@
                             <img class="hidden" src="{{ Vite::asset($product->getBackImage()) }}" alt="">
 
                             <div class="container-tag">
-                                <div class="tag"></div>
+                                @php
+                                    $badge = $product->getBadges();
+                                    // dd($badge[0]);
+                                @endphp
+                                @foreach ($badge as $key => $item)
+                                    @if (empty($item->getTag()))
+                                        <div class="tag red">
+                                            {{ $item->getDiscount() }}
+                                        </div>
+                                    @endif
+                                @endforeach
+
+                                @foreach ($badge as $key => $item)
+                                    @if (empty($item->getDiscount()))
+                                    <div class="tag green">
+                                        {{ $item->getTag() }}
+                                    </div>
+                                    @endif
+                                @endforeach
+
+
+
+                                {{-- @isset($badge[1])
+                                    @forelse ($badge[1] as $tag)
+                                        <div class="tag red">
+                                            @php
+                                            @endphp
+                                        </div>
+                                    @empty
+                                    @endforelse
+                                @endisset --}}
+
+
                             </div>
                         </div>
 
