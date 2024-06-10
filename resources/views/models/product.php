@@ -8,10 +8,10 @@ class Product
     private string $backImg;
     private string $brand;
     private string $name;
-    private int $price;
+    private float $price;
     private bool $isInFavorites;
     private array $badges = [];
-    private int $oldPrice = 0;
+    private float $discountPrice = 0;
 
 
 
@@ -123,14 +123,14 @@ class Product
         return $this->price;
     }
 
-    public function getOldPrice()
+    public function getDiscountPrice()
     {
         foreach ($this->badges as $badge) {
             if (empty($badge->getTag())) {
-                $this->oldPrice = floor($this->getPrice() / ($badge->getRealDiscount() / 100));
+                $this->discountPrice = $this->price - ($this->getPrice() * ($badge->getRealDiscount() / 100));
             }
         }
-        return $this->oldPrice;
+        return $this->discountPrice;
     }
     /**
      * Set the value of price

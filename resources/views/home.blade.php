@@ -48,11 +48,13 @@
                                     @if (empty($item->getTag()))
                                         <div class="tag red">
                                             {{ $item->getDiscount() }}
+                                            {{-- @dd($item->getRealDiscount()) --}}
                                         </div>
                                     @endif
                                 @endforeach
 
                                 @foreach ($badge as $key => $item)
+                                
                                     @if (empty($item->getDiscount()))
                                         <div class="tag green">
                                             {{ $item->getTag() }}
@@ -71,13 +73,16 @@
                                 {{ $product->getName() }}
                             </div>
                             <div class="price">
-                                {{ $product->getPrice() }}&euro;
-
-                                @if ($product->getOldPrice() != 0)
-                                    <span class="old-price">
-                                        {{ strval($product->getOldPrice()) }}&euro;
-                                    </span>
+                                @if (!empty($product->getDiscountPrice()))
+                                {{ strval(round($product->getDiscountPrice(), 2)) }}&euro;
+                                    
+                                @else
+                                    {{$product->getPrice()}}
                                 @endif
+                                    <span class="old-price">
+                                        {{ strval($product->getPrice()) }}&euro;
+                                    </span>
+                            
                             </div>
                         </div>
                     </div>

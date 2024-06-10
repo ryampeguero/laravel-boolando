@@ -18,6 +18,10 @@ header {
 
     background-color: #FF6900;
 
+    .container {
+        justify-content: space-around;
+        // border: 2px solid white;
+    }
 }
 
 .logo {
@@ -39,7 +43,6 @@ header {
         justify-content: space-between;
         align-items: center;
         list-style: none;
-        // border: 3px solid red;
         
         li {
             a {
@@ -50,9 +53,7 @@ header {
     }
 
     .icons {
-        gap: 10px;
-        max-width: 100px;
-        // border: 2px solid black;
-    
+        min-width: 200px;
+        max-width: 200px;
     }
 }

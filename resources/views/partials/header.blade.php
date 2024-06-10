@@ -1,7 +1,7 @@
 <header>
     <div class="container">
         <div class="row navbar d-flex justify-content-between">
-            <div class="col-3 border menu">
+            <div class="col-3 menu">
                 <ul style="padding: 0">
                     <li>
                         <a href="">Donna</a>
@@ -16,12 +16,12 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-3 border ms_cell">
+            <div class="col-3  ms_cell">
                 <div class="logo">
                     <img src={{ Vite::asset('resources/img/boolean-logo.png') }} alt="">
                 </div>
             </div>
-            <div class="col-3 border ms_cell">
+            <div class="col-3  ms_cell">
                 <div class="menu">
                     <div class="icons">
                         <ul style="padding: 0">
